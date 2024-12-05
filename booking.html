@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking | Dog Grooming Services</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Dog Grooming</div>
+        <button class="menu-toggle" id="menu-toggle">☰</button>
+        <nav>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="booking.html">Booking</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="banner">
+        <img src="images/dog-banner.jpg" alt="Dog Grooming Banner">
+    </section>
+
+    <main>
+        <h1>Book Your Appointment</h1>
+        <form action="#" method="POST">
+            <fieldset>
+                <legend>Customer Information</legend>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </fieldset>
+
+            <fieldset>
+                <legend>Service Request</legend>
+                <label for="groomer">Preferred Groomer:</label>
+                <select id="groomer" name="groomer">
+                    <option value="Amy">Amy</option>
+                    <option value="Kate">Kate</option>
+                    <option value="Nancy">Nacy</option>
+                </select>
+
+                <label for="date">Preferred Date:</label>
+                <input type="date" id="date" name="date" required>
+
+                <label>Service Type:</label>
+                <div>
+                    <input type="radio" id="basic" name="service" value="full" required>
+                    <label for="basic">Basic Grooming</label>
+                </div>
+                <div>
+                    <input type="radio" id="full" name="service" value="full">
+                    <label for="full">Full Grooming</label>
+                </div>
+                <div>
+                    <input type="radio" id="spa" name="treatment" value="full">
+                    <label for="spa">Spa Treatment</label>
+                </div>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Dog Grooming Services | Contact: <a href="mailto:info@doggrooming.com">info@doggrooming.com</a></p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

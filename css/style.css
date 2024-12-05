@@ -1,0 +1,107 @@
+/* General Navigation Styles */
+.nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Remove margin for list items */
+.nav-menu li {
+    margin: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    transition: background-color 0.3s, border-radius 0.3s;
+}
+
+.nav-menu li a:hover {
+    background-color: #45a049;
+    border-radius: 5px;
+}
+
+/* Header Styles */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Hamburger Menu Button */
+.menu-toggle {
+    display: none; /* Hide by default */
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    /* Show the hamburger icon on smaller screens */
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hide the menu by default on small screens */
+    .nav-menu {
+        display: none;
+        flex-direction: column;
+        gap: 10px;
+        background: #4CAF50;
+        position: absolute;
+        top: 60px; /* Adjust top position if necessary */
+        left: 0;
+        right: 0;
+        padding: 15px;
+        border-radius: 5px;
+        z-index: 1000;
+    }
+
+    /* Show the menu when 'active' class is added */
+    .nav-menu.active {
+        display: flex;
+    }
+}
+
+/* Google Map Container */
+.map-container {
+    margin: 20px 0;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .map-container iframe {
+        width: 100%;
+        height: 300px; /* Adjust height for smaller screens */
+    }
+}
+
+@media (min-width: 768px) {
+    .map-container iframe {
+        width: 600px; /* Set width for larger screens */
+        height: 450px;
+    }
+}
+
+/* Align price labels next to the values */
+td .label {
+    font-weight: bold;
+    margin-right: 5px; /* Add spacing between label and price */
+    color: #4CAF50; /* Match the theme with green color */
+    display: inline; /* Keep the label inline with the price */
+}
